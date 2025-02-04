@@ -1,0 +1,2 @@
+# m h dom mon dow user  command
+50 06  *   *  *   <USUÁRIO> curl http://<URL DO SERVIDOR DA APLICAÇÃO>/siaudi2/rotinasCron/

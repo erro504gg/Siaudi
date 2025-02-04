@@ -1,0 +1,913 @@
+/* ===================================================================== */
+/* Observa��o: 							 */
+/* 	Esta folha de estilo destina-se as especificidades do sistema  	 */
+/* ===================================================================== */
+
+/* Define a configura��o da marca de campos obrigat�rios */
+.important {
+    color: #FF0000;
+    overflow: visible;
+    display: inline;
+}
+
+
+.MultiFile-odd{
+    background-color: #F4F4F4;
+    border-bottom: 1px solid #CCCCCC;
+    padding-left: 3px;
+
+    vertical-align:bottom;
+    margin-top: 0px; padding-top: 7px; height: 24px;
+    /*  padding-top: 1px; padding-bottom: 7px;
+    vertical-align: super;*/
+}
+
+.MultiFile-even{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    padding-left: 3px;
+    vertical-align:bottom;
+    margin-top: 0px; padding-top: 7px; height: 24px;
+
+    /* padding-top: 1px; padding-bottom: 7px;
+    vertical-align: super;*/
+}
+
+
+
+
+/* ajusta o tamanho da barra de t�tulo */
+#pageTitle{	position:relative; padding:0px; margin:0px;}
+
+/* pageTitle : define a cor de texto do titulo da p�gina*/
+div#pageTitle h1 {color: #967234;}
+
+/* ajusta a posi��o do subt�tulo da p�gina */
+#pageTitle H2{float:none;}
+
+#menuContexto{ /* ajusta a posi��o do menu de contexto */
+    top:auto;
+    bottom:2px;}
+#menuContexto LI.ativo A{color: #D0AF79;}
+
+/* define a cor do link do 1� nivel do menu*/
+#menuNiv1 a:hover{color:#333333;}
+
+/* define a cor da borda do 3� nivel do menu*/
+div#menuNiv3 div{min-height:85px;border-bottom:1px solid #D1B078;}
+
+iframe#correcaoMenuIE{height:191px;}
+
+#conteudo h2 {font-size: 13px;}
+#conteudo h3 {font-size: 12px;}
+#conteudo h4 {font-size: 11px;}
+
+
+/*-- Novo comportamento do menu -------------------------------------*/
+#menuNiv3 ul{padding:0px;}
+#menuNiv3 li{clear:left;cursor:default;padding:0px 15px;}
+#menuNiv3 span{
+    cursor:pointer;
+    padding-right:15px;
+    background-image:url(../images/setaItem_off.gif);
+    background-repeat:no-repeat;
+    background-position:right;}
+
+#menuNiv3 span.itemAtual{
+    color:#666666;
+    font-weight:900;
+    background-image:url(../images/setaItem_on.gif);
+    background-repeat:no-repeat;
+    background-position:right;}
+
+#menuNiv3 ul ul{
+    float:left;
+    padding:0px 0px 10px 0px;
+    border-right:none;
+    display:none;}
+
+#menuNiv3 ul ul li{
+    padding-left:10px;
+    border-left:1px solid #ccc;}
+
+#menuNiv3 ul ul li a:hover{color: #666;text-decoration:underline;}
+
+/*-- FIM: Novo comportamento do menu -------------------------------------*/
+
+
+/*-- Mensagens -----------------------------------------------------------*/
+#mensagens h4{
+    font-size:100%;
+    color:#333333;
+    margin:0px;
+    padding:5px 0px 2px 0px;}
+
+#mensagens ul{
+    margin:0px 25px;
+    list-style:square;}
+/*-- FIM: Mensagens ------------------------------------------------------*/
+
+/* label : define o tamanho da div do label e o peso da fonte */
+div.formulario .label{width: 225px;clear:both}
+
+div.formulario .field{vertical-align:middle; padding:4px 0px;}
+div.formulario .field input{margin:-4px 0px;}
+
+div.formulario .field input:focus{
+    background-color:#F7F0E6;
+border: 1px solid #D1B078;}
+
+.formulario fieldset.visivel .label{width:210px;}
+
+
+/* Define o posicionamente do elemto de item obrigatorio do formul�rio */
+div.formulario .label span{
+    position:absolute;
+    left:10px;
+    color:#999999;
+    z-index:0;
+    _z-index:-1;
+}
+
+div.formulario fieldset.visivel .label span{
+    position:relative;
+    left:inherit;
+    margin:0px 10px 0px 0px;
+    color:red;
+}
+
+
+.formulario legend {font-size: 13px;}
+
+
+/* Define a cor de fundo e borda dos elementos do fumul�rio quando est�o em foco */
+input:focus, select:focus, textarea:focus{border:1px solid #D1B078; background-color:#F7F0E6}
+
+/* Define a cor de fundo para os campos nao editaveis */
+input[readonly]{background-color:#f4f4f4}
+input[readonly]:focus{border:1px solid #666666;}
+
+/* Define a cor de fundo da linha quando o ponteiro esta sobre a linha */
+.tabelaListagemItens tr:hover {background-color: #F7F0E6;}
+.tabelaListagemItens td{border-bottom: 1px solid #CCCCCC;}
+.tabelaListagemItens tr td:last-child{border-right:none;}
+
+/* Define as configura��es das linha totalizadoras */
+.tabelaListagemItens tr.subTotal{
+    background-color:#FFFFFF;
+    font-weight:bold;
+    border-color:#666666;
+}
+
+.tabelaListagemItens tr.Total th, .tabelaListagemItens tr.Total td{
+    background-color:#CCCCCC;
+    font-weight:bold;
+    color:#333333;
+    border:1px solid #666666;
+}
+
+.tabelaListagemItens td blockquote{
+    margin:0px 25px;
+
+}
+
+/* Core��o das bordas quando existir uma tabela de listagem dentro de uma tabela com abas*/
+td.tabelaAbasConteudo .tabelaListagemItens th{
+    padding: 2px 4px;
+    text-align: left;
+    background-color:#CCCCCC;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:1px solid #666666;
+}
+
+/*Configura os paragrafos dentro da Classe ROW */
+div.row p{margin-top:10px;}
+
+/*Corre��o de alinhamento dos elementos */
+div.formulario div.row div.row{display:block;margin:0px;padding:1px}
+
+/* Recipiente para os bot�es */
+.rowButtonsN1{
+    display:block;
+    clear:both;
+    font-size: 11px;
+    text-align: right;
+    margin-top: 10px;
+    padding:4px 0px;
+    border-top:1px solid #dbdbdb}
+
+.rowButtonsN1_{
+    display:block;
+    clear:both;
+    font-size: 11px;
+    text-align: left;
+    margin-top: 10px;
+    padding:4px 0px;
+    border-top:1px solid #dbdbdb}
+
+.rowButtonsN2 {
+    display:block;
+    clear:both;
+    font-size: 11px;
+    text-align: right;
+    margin-top: 2px;
+    padding:4px 0px;
+    border-top:2px dotted #dbdbdb}
+
+/* Recipiente para os bot�es da Mensagens */
+.rowButtonsMensagens {
+    width:60%;
+    display:block;
+    clear:both;
+    font-size: 11px;
+    text-align: right;
+    padding:4px 20px;}
+
+/* Utilizado para dar destaques aos compos preenchidos pelo sistema */
+.destaqueCinza {
+    background-color: #EFEFEF;
+    padding: 10px;
+    margin: 10px 0px;}
+
+.destaqueCinza h3{
+    border-bottom:2px dotted #666666;
+    margin:0px;}
+
+div.row h3.subTitulo{
+    border-bottom:1px dotted #666666;
+    margin:10px 0px 0px 0px;}
+
+/*define as configura��es para a tabela com abas*/
+.tabelaAbas {
+    width:100%;
+    text-align: left;
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    border-collapse:collapse;}
+
+.tabelaAbas th{
+    padding:4px;
+    background-color:#dbdbdb;
+    border:1px;
+    border-style:solid;
+    border-color:#999999;
+    text-align:center;
+    font-weight:normal;}
+
+.tabelaAbas th a{
+    padding:4px;
+    font-weight:normal;
+    display:block;
+    cursor:pointer;
+    margin:-4px -4px;}
+
+.tabelaAbas th a:hover {background-color: #F7F0E6;}
+
+.tabelaAbas th.tabelaAbaAtiva{
+    border-top:2px solid #999999;
+    border-left:1px solid #999999;
+    border-right:1px solid #999999;
+    border-bottom:1px solid #ffffff;
+    background-color:#FFFFFF;}
+
+.tabelaAbas th.tabelaAbaAtiva a{
+    font-weight:bold;
+    cursor:default;
+    text-decoration:none;}
+
+.tabelaAbas th.tabelaAbaAtiva a:hover{
+    background-color:#FFFFFF;
+    text-decoration:none;}
+
+.tabelaAbas td.tabelaAbasConteudo{
+    border-top:none;
+    border-left:1px solid #999999;
+    border-right:1px solid #999999;
+    border-bottom:1px solid #999999;}
+
+.tabelaAbas td.tabelaAbasConteudo h3{
+    border-bottom:2px dotted #666666;
+    margin-top:0px;}
+
+
+/*define as configura��es para as tabela utilizadas em formularios para agrupar os campos*/
+.tabelaDados {
+    width:100%;
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    border-collapse:collapse;}
+
+.tabelaDados td.label{
+    float:none;
+    width:25%;
+    margin:0px;
+    padding:2px;
+    height:auto;
+    display:table-cell;}
+
+.formulario fieldset.visivel .tabelaDados td.label span, .tabelaDados td.label span {
+    position:relative;
+    left:inherit;
+    margin:0px 10px 0px 0px;
+    color:#999999}
+
+.formulario fieldset.visivel legend, .formulario legend.legendaDiscreta {
+    text-indent: 0px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #666666;
+    margin-bottom: 0px;}
+
+.tabelaDados td.field{
+    float:none;
+    width:25%;
+    margin:0px;
+    padding:2px;
+    height:auto;
+    display:table-cell;}
+
+.caminho {
+    padding: 2px 4px;
+    text-align: left;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    font-weight: normal;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;}
+
+.caminho ul{
+    list-style:none;
+    margin:0px;}
+
+.caminho ul li:first-child{
+    border-left:none;
+    padding-left:0px;}
+
+.caminho ul li{
+    color:#999999;
+    float:left;
+    padding:0px 7px;
+    border-left:1px solid #999999}
+
+.caminho ul li.ativo{
+    color:#666666;
+    font-weight:bold;}
+
+a.botao{
+    color: #666666;
+    padding: 1px 12px;
+    border-style: solid;
+    border-color: #999999;
+    border-width: 0px 1px 1px 0px;
+    margin-right: 2px;
+    background-image:url(../images/f_botao.gif);
+    background-repeat:repeat-x;
+    font-weight:bold;
+    text-align:center;}
+
+a.botao:hover{
+    color: #666666;
+    text-decoration:none;}
+
+a.botao:focus{border:1px solid #D1B078; background-color:#F7F0E6}
+
+.tagelaListagemLegenda{ height:15px;}
+
+
+.tagelaListagemLegenda ul{
+    list-style:square;
+    margin:0px 15px;
+    position:relative;}
+
+.tagelaListagemLegenda ul li{
+    float:left;
+    margin-right:20px;
+    font-size:90%}
+
+.tagelaListagemLegenda ul li span{color:#333333}
+
+.legendaAzul{color:#0000FF}
+.legendaVermelho{color:#FF0000}
+
+/*--------------------------------------------------------*/
+/*-- Mapa do Sistema :: Altera��o das cores --------------*/
+
+#mapaSistema{
+    position:absolute;
+    left:10px;
+    right:10px;
+    margin:10px 0px;
+    padding:6px 10px;
+    background-color:#F3F3F3;
+}
+
+#mapaSistema ul {
+    list-style: none;
+    margin: 2px 20px 2px 0px;
+    padding: 0;
+    float: left;
+}
+
+#mapaSistema li.grupo{padding-left:10px;}
+
+#mapaSistema li{padding-left:20px;}
+
+#mapaSistema ul ul{
+    float:none;
+    padding:0px 0px 0px 15px;
+    border-right:none;}
+
+#mapaSistema ul ul li{
+    padding-left:10px;
+    border-left:1px solid #ccc;
+}
+
+
+#mapaSistema H1{
+    padding:0;
+    text-align:center;
+    font-size:1.8em;
+    color:#967234;
+    text-transform:uppercase;
+    margin:0;
+}
+
+#mapaSistema H2{
+    font-size:1em;
+    padding-left:4px;
+    margin:10px 6px 0 6px ;
+    color:#000;
+    background-color:#D0AF79;
+}
+
+#mapaSistema H3{margin: 7px 0px 2px 0px}
+
+#mapaSistema div{
+    width:100%;
+    position:relative;
+    margin:6px 0px 12px 0px;
+    padding:0px;
+    background-color: #fafafa;
+    border-right:1px solid #D1B078;
+    border-bottom:1px solid #D1B078;
+    float:left;}
+
+#mapaSistema hr{
+    clear:both;
+    border:15px solid #FFF;
+    margin:0px -10px 10px -10px;
+}
+
+
+/* Mensagens */
+.sucesso ul{
+    margin-left:30px;
+    list-style:square;
+}
+
+
+
+/*
+        #mapaSistema DIV.mapaNiv1{
+                padding:1px 0px;
+                margin:0 4px 12px 4px;
+                float:left;
+                background-color:#F3F3F3;
+        }
+
+        #mapaSistema A{
+                border-left:2px solid #d1d1d1;
+                color:#333333;
+        }
+
+
+
+
+        #mapaSistema LI{
+                font-size:12px;
+                color:#333;
+                text-align:left;}
+
+
+
+        #mapaSistema div.mapaNiv2 UL{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                float: left;
+        }
+*//*
+
+#mapaSistema{
+        margin-top:50px;
+        _margin-top:20px;
+        margin-right:-15px;
+        margin-left:-15px;}
+
+#mapaSistema A{
+        margin-right:4px;
+        margin-left:-2px;
+        border-left:2px solid #d1d1d1;
+        padding-left:5px;
+        color:#5d5d5d;}
+
+#mapaSistema UL{
+        margin-left:0.7em;
+        list-style:none;}
+
+#mapaSistema LI{
+        font-size:12px;
+        color:#333;
+        text-align:left;}
+
+
+#mapaSistema .mapaNiv1 H1{
+        padding:0;
+        text-align:center;
+        font-weight:bold;
+        font-size:1.4em;
+        color:#000;}
+
+
+#mapaSistema LI.mapaNiv2{
+        margin-top:6px;
+        margin-left:-2px;
+        margin-right:6px;
+        margin-bottom:12px;
+        padding:6px;
+        background-color: #fafafa;
+        border-right:1px solid #d1d1d1;
+        border-bottom:1px solid #d1d1d1;}
+
+#mapaSistema .mapaNiv2 H2{
+        font-size:1em;
+        padding-left:4px;
+        background-color:#d1d1d1;
+        margin:0 0 4px 0;
+        color:#000;}
+
+#mapaSistema .mapaNiv2 LI H3{margin-bottom:0;}
+
+#mapaSistema LI.conjuntoCenarios{margin-bottom:6px;}
+
+*/
+
+
+
+
+
+
+/*-- Mapa do Sistema :: Altera��o das cores --------------*/
+/*--------------------------------------------------------*/
+
+/*--------------------------------------------------------*/
+/*-- Defini��es do Help ----------------------------------*/
+
+#conteudoHelp{
+    padding: 20px 0px;
+}
+
+#conteudoHelp h1 {
+    padding:0px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#conteudoHelp h2 {
+    padding:0px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#conteudoHelp h3 {
+    padding:0px 20px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #666666;
+}
+
+#conteudoHelp h4 {
+    padding:0px 20px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #999999;
+}
+
+#conteudoHelp a {
+    text-decoration: none;
+}
+
+#conteudoHelp a:hover {
+    text-decoration: underline;
+}
+
+#conteudoHelp p{
+    padding:0px 20px;
+    font-size:110%;
+    clear:both;
+    margin-top:10px;
+    text-align:justify;
+}
+
+#conteudoHelp #pageTitle{
+    width:100%;
+    float:left;
+    clear:both;
+    height:36px;
+    padding:0px;
+    background-image:url(../images/f_titulo_pagina.jpg);
+    background-repeat:repeat-x;
+    background-position:bottom;
+    margin:0px 0px 10px 0px;
+    vertical-align:top;
+}
+#conteudoHelp #pageTitle h1 {
+    clear:both;
+    font-size:17px;
+    padding:0px 18px;
+    margin:-15px 0px 7px 0px;
+}
+
+#conteudoHelp #pageTitle h2 {
+    font-size: 10pt;
+    font-weight:100;
+    color: #565656;
+    margin:0px;
+    padding:0px 18px;
+    float:left;
+}
+/*-- Defini��es do Help ----------------------------------*/
+/*--------------------------------------------------------*/
+
+
+/*--------------------------------------------------------*/
+/*-- Defini��es da Janela Fluxo---------------------------*/
+#baseFluxo{
+    position:absolute;
+    top:0;left:0;
+    z-index:250;
+    display:none;
+    width:100%;
+    height:100%;
+    background-color:#CCCCCC;
+    background-image:url(fundo.jpg);
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+    opacity: .20;}
+
+#baseFluxo iframe{
+    position:absolute;
+    top:0;left:0;
+    width:99%;
+    height:99%;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+    opacity: .20;
+    border:none;}
+
+div.fluxoRequisito{
+    position:absolute;
+    top:50px;left:50%;
+    z-index:260;
+    background-color: #d1cfd0;
+    margin-left:-200px;
+    width:400px;}
+
+div.fluxoRequisito div{
+    position:relative;
+    top:-4px;left:-4px;
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    padding:5px;}
+
+div.fluxoRequisito h1{
+    font-size:16px;
+    font-weight:bold;
+    border-bottom:1px solid #999;
+    margin:0px 0px 3px 0px;}
+
+div.fluxoRequisito h2{
+    font-size:12px;
+    font-weight:bold;
+    color:#333333;
+    margin:0px 5px 0px 5px;}
+
+div.fluxoRequisito p{margin:0px 20px 15px 20px;}
+
+div.fluxoRequisito ul{margin:0px 20px 15px 20px;}
+div.fluxoRequisito li{
+    margin-left:20px;
+    margin-right:20px;
+    list-style:square;}
+
+div.fluxoRequisito span{
+    display:block;
+    text-align:right;
+    border-top:1px solid #666666;
+    padding:4px 0px;}
+/*-- Defini��es da Janela Fluxo---------------------------*/
+/*--------------------------------------------------------*/
+
+div#poupBoxFundo{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:250;
+    display:block;
+    width:100%;
+    height:100%;
+    background-color:#CCCCCC;
+    background-image:url(fundo.jpg);
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+    opacity: .20;}
+
+div#poupBoxFundo iframe{
+    position:absolute;
+    top:0;left:0;
+    width:99%;
+    height:99%;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+    opacity: .20;
+    border:none;}
+
+div#poupBox{
+    position:absolute;
+    top:220px;left:50%;
+    z-index:260;
+    background-color: #d1cfd0;
+    margin-left:-200px;
+    width:400px;}
+
+div#poupBox div{
+    position:relative;
+    top:-4px;left:-4px;
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    padding:5px;}
+
+
+/*-- Defini��es para os contatos ---------------------------*/
+#contato{margin-top:45px;}
+#contato A {color:#967234;}
+
+/**************************************************/
+/************* Sele��o DE -> PARA *****************/
+
+/* Conjunto de classes que define a formata��o dos combos e bot�es
+/* de uma sele��o de troca de op��es entre combos						 */
+
+.selecaoDePara{padding-bottom:6px;}
+.selecaoDePara .de{display:table-cell;}
+.selecaoDePara .para{display:table-cell;}
+.selecaoDePara .controles{
+    display:table-cell;
+    width:100px;
+    text-align:center;}
+.selecaoDePara .controles INPUT{margin:2px 0;}
+.selecaoDePara .controles .ctrlIncluir{margin:1.4em 0 20px 0;}
+.selecaoDePara .controles .ctrlRetirar{}
+
+/************* Sele��o DE -> PARA *****************/
+/**************************************************/
+
+.controlError{
+    border: 1px solid #ff0000;
+}
+
+.tab-active{
+    border-top: 1px solid #967234;
+    border-left: 1px solid #967234;
+    border-right: 1px solid #967234;
+    background-color: #ffffff;
+    font-size: 11px;
+}
+.tab-normal{
+    border: 1px solid #967234;
+    background-color: #F7F0E6;
+    font-size: 11px;
+}
+.tab-view{
+    border: 1px solid #967234;
+}
+
+.acomplete {
+    position: relative;
+    z-index: 100;
+    background-color: #F7F0E6;
+    border: 1px solid #967234;
+}
+.acomplete ul, .acomplete li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    color: #000000;
+}
+.acomplete li {
+    padding: 4px;
+    border-top: 1px solid #967234;
+}
+.acomplete .selected {
+    background-color: #f4f4f4;
+}
+
+.TDatePicker_default
+{
+    border:1px solid #967234;
+}
+
+.TDatePicker_default .date, .weekDayHead
+{
+    color: black;
+    font-size: 10px;
+}
+
+.todayButton{
+    background-color: #f4f4f4;
+}
+
+.button{
+    color: #666666;
+    padding: 0px 10px;
+    border-style: solid;
+    border-color: #999999;
+    border-width: 0px 1px 1px 0px;
+    margin-right: 2px;
+    background-image:url(/common/themes/brownTheme/img/f_botao.gif);
+    background-repeat:repeat-x;
+    height: 20px;
+    font-weight:bold;
+    text-transform:none;
+}
+
+.TDatePicker_default .selected
+{
+    color: white;
+}
+
+.divGrid{
+    width: 15px;
+    height: 15px;
+}
+
+.telaErro {
+    min-height:28px;
+    color:#B43419;
+    padding:0px 0px 0px 32px;
+    background-repeat:no-repeat;
+    background-color:#FDF5F3;
+    border:1px solid #F3B1A3
+}
+
+/* Definicao de estilo para a janela modal */
+.modal {
+    position:relative;
+    left:50%;
+    top:50%;
+    width:300px;
+    height:250px;
+    margin-left:-150px;
+    margin-top:-125px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 2px solid #967234;
+    z-index:100;
+}
+.tituloModal{
+    min-height: 20px;
+    padding: 0px 0px 0px 0px;
+    background-color: #FDF5F3;
+    border-bottom: 1px solid #967234;
+    color: #967234;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.borderPortlet
+{
+    border:1px solid #967234;
+}
+
+
+#sap-grid .button-column{
+    width: 90px;
+}
+
+#sap-grid .button-column a{
+    padding-left: 1px; padding-right: 1px;
+}
+
+div.formulario .autocomplete {
+    border: 1px solid #999999;
+    background-color: #FFFFFF;
+    
+}
+
+.tabelaListagemItens tr.fundo_alerta:hover {
+    background-color: #CDAA7D;
+}

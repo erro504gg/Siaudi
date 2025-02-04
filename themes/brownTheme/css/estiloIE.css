@@ -1,0 +1,86 @@
+/********* ESTILO GERAL *************/
+#acessoSistemas select {font-size: 8px;}
+
+#menuNiv2 LI{padding-left:8px;}
+
+
+#pageTitle h1 {	position:relative;margin-top:-20px}
+
+#menuContexto{
+	bottom:0;
+	right:55px;}
+#menuContexto UL{margin-top:5px;}
+#menuContexto UL LI{
+	margin:0px 3px;
+	line-height: 16px;}
+
+#mensagens {clear:none;}
+
+.orientacao, .erro, .sucesso, .alerta{height:auto;}
+
+#pagInicial{margin:45px 20px auto 20px;}
+
+
+#popupBoxFundo iframe{
+	display:block;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	height:100%;
+	margin-top:-4px;
+	margin-right:43px;
+	margin-left:-3px;
+	width:100%;}
+
+form {width:auto}
+
+.formulario fieldset.visivel legend, .formulario legend.legendaDiscreta {background-color:#FFFFFF;}
+
+div.formulario .label{
+	width: 200px;
+	line-height:120%;}
+
+div.formulario .field,
+div.formulario FIELDSET.visivel .field{margin-left:0;  padding:0px 0px;}
+
+div.formulario .field input{margin:0px 0px;}
+
+div.formulario FIELDSET.visivel .label{width:200px;}
+div.formulario .labelTexto {width: 120px;}
+
+div.formulario div.row div.row{display:block;margin:0px;padding:0px}
+
+.row .esquerda{width:45%;}
+.row .direita{
+	width:45%;
+	margin-left:47%;}
+
+FIELDSET#fatoresConversao .rowsGroup .label{width:60px;}
+/*FIELDSET#fatoresConversao .rowsGroup .field{margin-left:70px;}*/
+
+.botoesFormulario{margin-left:175px;}
+.botoesFormulario.botoesDw{margin-left:180px;}
+
+.selecaoDePara .de{
+	display:block;
+	float:left;}
+.selecaoDePara .para{display:block;}
+.selecaoDePara .controles{
+	display:block;
+	float:left;
+	width:130px;}
+
+
+.destaqueCinza .row{margin-bottom:6px;}
+.destaqueCinza UL{padding-left:15px;}
+
+.bulletRepeticao{line-height:22px;}
+
+.boxProdutos .coluna02de03{left:32%;}
+.boxProdutos .coluna03de03{left:63%;}
+
+#listaOperacoes .operacoes A:hover{text-decoration:none;}
+
+.exportaConsulta{margin-top:8px;}
+.exportaConsulta.produto{margin-top:30px;}
+
+
+#checkmarkPeriodo{padding-top:6px}

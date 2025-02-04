@@ -1,0 +1,892 @@
+/* ===================================================================== */
+/* Observação: 													  		 */
+/* 	Esta folha de estilo destina-se aos estilos padrões para todos os 	 */
+/*	sistemas.														 	 */
+/* ===================================================================== */
+
+/* == Formatação dos - Elementos HTML ================================== */
+/* Define as configurações dos elementos Html		 					 */
+/* ===================================================================== */
+body {
+    font-family: "Trebuchet MS", Verdana, Arial, sans-serif, sans;
+    background-color: #fff;
+    color: #333333;
+    margin: 0px;
+    padding: 0px;
+    font-size: 11px;
+    height: 100%;
+}
+
+form, dl, ul, ol, dt, dd, p, address {
+    margin:0px;
+    padding:0px;
+}
+
+hr {
+    background-color: #dbdbdb;
+    height: 1px;
+    border: none;
+}
+
+hr.dotted {
+    border-top: 1px dashed #dbdbdb;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+}
+
+.notaRodape {
+    font-size: 9px;
+}
+
+.hide, .hidden {
+    display: none;
+}
+
+/* cabecalho : camada de base geral */
+#geral {
+    height: 100%;
+    padding-top:0px;
+    text-align:left;
+}
+
+/* == Cabecalho - Elementos ============================================ */
+/* Conjunto de classes que define as configurações do cabeçalho          */
+/* do sistema 										 					 */
+/* ===================================================================== */
+
+/* cabecalho : camada de base */
+#cabecalho {
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: 60px;
+    position: relative;
+    background-image: url(../img/f_cabecalho.jpg);
+    background-repeat: repeat-x;
+    z-index:100
+}
+
+
+/* cabecalho : posicionamento da logo*/
+#marca {
+    position:relative;
+    float: right;
+}
+
+
+/* cabecalho : posicionamento da logo do sistema */
+#tituloSistema {
+    position:relative;
+    float:left;
+    top:0px;
+    left:0px;
+    margin:0px;
+    padding: 0;
+}
+
+
+/* wrapperMenuAuxiliar : base para os elementos "Acessos aos Sistemas" e "Menu auxiliar" */
+#wrapperMenuAuxiliar {
+    top:60px;
+    right:0px;
+    width: 340px;
+    margin-right: 10px;
+    font-family: Arial, sans-serif, sans;
+    z-index:100
+}
+
+/* acessoSistemas : define as configuração dos elementos da barra de acesso a outros sistemas */
+#acessoSistemas {
+    position:absolute;
+    top:0px;
+    color: #ffffff;
+    font-size: 10px;
+    z-index:100;
+    left:40%;
+    width:300px;
+    height:20px;
+    background-image:url(../img/f_sistemas.jpg);
+    background-repeat:repeat-x;
+}
+
+#acessoSistemas label {
+    position:relative;
+    float:left;
+    margin:2px 2px;
+}
+
+#acessoSistemas select {
+    position:relative;
+    float:left;
+    background-color: #fff;
+    color: #333;
+    font-size: 7pt;
+    width: 170px;
+    height: 14px;
+    margin:1px;
+}
+
+#acessoSistemas #imgE{
+    position:relative;
+    float:left;
+    top:0px;
+    left:-3px;
+    margin:0px;
+    border:none;
+}
+#acessoSistemas #imgD{
+    position:relative;
+    float:right;
+    top:0px;
+    right:-3px;
+    margin:0px;
+    border:none;
+}
+/* fim -> acessoSistemas */
+
+
+#sair{
+    position:absolute;
+    top:61px;
+    right:0;
+    padding:0 4px;
+    color:#FFF;}
+#sair A{color:#FFF;font-weight:bold;text-decoration:none;}
+#sair A:hover{text-decoration:underline;}
+#sair span{padding-right:6px}
+
+/* menuAuxiliar : define as configuração dos elementos da barra do menu auxiliar */
+#menuAuxiliar {
+    position:absolute;
+    height:21px;
+    padding:2px 0px;
+    clear:right;
+    top:79px;
+    float: right;
+    right:0px;
+    color: #666666;
+    font-size: 10px;
+    background-image:url(../img/f_menuaux.jpg);
+    background-repeat:repeat-x;
+    z-index:100
+}
+
+#menuAuxiliar ul {
+    padding:0px;
+    margin:0px;
+    float: left;
+    list-style:none;
+}
+
+#menuAuxiliar ul li { display: inline; }
+
+#menuAuxiliar ul li a {
+    float:left;
+    text-decoration: none;
+    text-align: center;
+    padding: 2px 4px 0px 4px;
+    font-size: 9px;
+    margin: 0px;
+    border-bottom: none;
+    color:#333333;
+    border-left: 1px solid #666666
+}
+
+#menuAuxiliar ul li a:hover {
+    text-decoration: underline;
+}
+/* fim -> menuAuxiliar */
+
+
+/* menuPrincipal : Define as configurações do primeiro nível do menu. (Menu de Abas) */
+#wrapperMenuPrincipal a{
+    text-decoration:none;
+}
+
+DIV#menuNiv1{
+    font-family: "Trebuchet MS", Verdana, Arial, sans-serif, sans;
+    left:15px;
+    height:19px;
+    background-image:url(../img/f_modulo.jpg);
+    background-repeat:repeat-x;
+}
+
+#menuNiv1 ul{
+    margin-left:15px;
+    list-style:none;
+}
+
+#menuNiv1 li {
+    float:left;
+    background:url(../img/modulo_e.jpg) no-repeat left top;
+    margin-right:5px;
+}
+
+#menuNiv1 a{
+    display:block;
+    background:url(../img/modulo_d.jpg) no-repeat right top;
+    padding:1px 18px 1px 10px;
+    font-weight:bold;
+    font-size:8pt;
+    color:#f4f4f4;
+    text-decoration: none;
+}
+#menuNiv1 a:hover{color:#CDCDCD;}
+
+#menuNiv1 li.atual { background-image:url(../img/modulo_e_on.jpg); }
+#menuNiv1 li.atual a {
+    background-image:url(../img/modulo_d_on.jpg);
+    color:#000;
+    padding:1px 20px 1px 10px;
+}
+#menuNiv1 li.atual a:hover{color:#000;}
+
+
+#menuNiv1 #menuNiv1_complemento{ float:right;right:0px; }
+/* fim -> menuNiv1 */
+
+
+/* menuPrincipal : define as configurações do segundo nível do menu. */
+DIV#menuNiv2 {
+    position: relative;
+    float:left;
+    width:100%;
+    height:21px;
+    background-image:url(../img/f_menu.jpg);
+    background-repeat: repeat-x;
+
+}
+
+#menuNiv2 div{display:none}
+
+#menuNiv2 ul{
+    padding-left:18px;
+    list-style: none;
+}
+
+
+#menuNiv2 li {
+    display:inline;
+    padding: 0px 5px;
+    color: #666666;
+    border-right: 1px solid #999;
+    cursor:pointer;
+    font-size:8pt;
+    font-weight:100
+}
+#menuNiv2 li a{
+    display:inline;
+    padding: 0px 5px;
+    color: #666666;
+    cursor:pointer;
+    font-size:8pt;
+    font-weight:100;
+    text-decoration: none;
+}
+
+#menuNiv2 li:hover, #menuNiv2 li.atual{color:#000000;}
+
+
+
+/* submenu : define as configurações do terceiro nível do menu. */
+div#menuNiv3 div{
+    display:none;
+    position:absolute;
+    clear:both;
+    overflow:visible;
+    z-index:150;
+    width:100%;
+    top:100px;
+    padding:10px 0/* 0 10px 18px*/;
+    border-bottom:1px solid #598339;
+    background-color:#F4F4F4;
+    max-height:170px;
+    _height:170px;
+    font-size:8pt;
+}
+
+
+#menuNiv3 ul{
+    list-style: none;
+    float:left;
+    padding:0 15px;
+    border-right:1px dotted #999999;
+}
+
+#menuNiv3 ul ul{border:none;}
+
+#menuNiv3 li{
+    font-size:11px;
+    margin-left:10px;
+    font-weight:normal;}
+
+#menuNiv3 li.grupo{
+    margin-left:0;
+    font-weight:bold;}
+
+#menuNiv3 li a{ color: #333333; }
+
+#menuNiv3 li a:hover{
+    color: #000000;
+    text-decoration:underline;}
+
+iframe#correcaoMenuIE{
+    position:absolute;
+    display:none;
+    width:100%;
+    clear:both;
+    top:100px;
+    z-index:140;
+    background-color:#F4F4F4;
+    height:170px;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+/* fim -> submenu */
+
+/* fim -> menuPrincipal */
+
+
+
+/* == Fim : Cabeçalho - Elementos == */
+
+
+
+/* == Conteudo - Elementos ============================================= */
+/* Conjunto de classes que define as configurações do conteúdo da página */
+/* ===================================================================== */
+
+/* wrapperConteudo : base para o conteudo */
+#wrapperConteudo {
+    width:auto;
+    clear:both;
+}
+
+/* conteudo : define as configurações dos elementos do conteúdo */
+#conteudo{padding: 20px 0px;}
+
+#conteudo h1 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#conteudo h2 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#conteudo h3 {
+    font-size: 11px;
+    font-weight: bold;
+    color: #666666;
+}
+
+#conteudo h4 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #999999;
+}
+
+#conteudo a {
+    color: #333333;
+    text-decoration: none;
+}
+
+#conteudo a:hover {
+    text-decoration: underline;
+}
+
+/* fim -> conteudo */
+
+
+/* pageTitle : define as configurações dos elementos que compoem o titulo da página */
+#pageTitle{
+    width:100%;
+    float:left;
+    clear:both;
+    height:36px;
+    padding:0px;
+    background-image:url(../img/f_titulo_pagina.jpg);
+    background-repeat:repeat-x;
+    background-position:bottom;
+    margin:0px;
+    vertical-align:top;
+}
+#pageTitle h1 {
+    clear:both;
+    font-size:17px;
+    padding:0px 18px;
+    margin:-15px 0px 7px 0px;
+}
+
+#pageTitle h2 {
+    font-size: 10pt;
+    font-weight:100;
+    color: #565656;
+    margin:0px;
+    padding:0px 18px;
+    float:left;
+}
+/* fim -> pageTitle */
+
+
+/* menuContexto : define as configurações do menus de contexto das páginas */
+#menuContexto{
+    position:absolute;
+    top:137px;
+    right:15px;
+    text-transform:lowercase;
+}
+
+#menuContexto ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menuContexto ul li{
+    display:inline;
+    padding:0px 5px;
+    border:2px solid #dbdbdb;
+    margin:0px 2px 0px 0px;
+    background:#dbdbdb;
+}
+
+#menuContexto a{
+    font-size: 11px;
+    font-weight:100;
+    color: #666666;
+    width:100%;
+    text-align:center;
+    text-decoration:none;
+}
+
+#menuContexto li.ativo{
+    border-top:2px solid #dbdbdb;
+    border-left:1px solid #dbdbdb;
+    border-right:1px solid #dbdbdb;
+    border-bottom:2px solid #ffffff;
+    background:#FFFFFF
+}
+#menuContexto li.ativo a{
+    font-size: 11px;
+    font-weight:bold;
+}/* Esp: cor*/
+#menuContexto li.ativo a:hover{text-decoration:none}
+/* fim -> menuContexto */
+
+
+#contato{
+    margin-top:30px;
+    margin-left:30px;
+    padding-left:60px;
+    background: url("../img/arroba.gif") no-repeat left top;}
+#contato .dadosContato{margin-left:3em}
+
+#listaManuais{
+    margin-top:30px;
+    margin-left:30px;
+    padding-left:60px;
+    background: url("../img/manuais.gif") no-repeat left top;}
+#listaManuais UL{margin:0 0 10px 30px;}
+
+/* Imagem que avisa que um processamento está ocorrendo */
+.indicadorCarregando{
+    background-image:url(../img/indicator.gif);
+    background-position:top left;
+    background-repeat:no-repeat;
+    display:inline;
+    padding-left:13px;}
+
+
+
+
+/* == Mensagens - Elementos ============================================ */
+/* Conjunto de classes que define as configurações das mensages          */
+/* ===================================================================== */
+
+/* mensagens: define as configurações das mensagem de orientação*/
+#mensagens {
+    width:60%;
+    clear:both;
+    padding:4px 20px;
+    margin:0px;
+}
+#mensagens p{
+    font-size: 11px;
+    overflow: visible;
+    line-height: 14px;
+    margin: 6px 0px;
+}
+
+
+/* .oritentacao: define as configurações das mensagem de orientação*/
+.orientacao {
+    min-height:28px;
+    color:#333333;
+    padding:0px 0px 0px 32px;
+    background-image:url(../img/m_orientacao.gif);
+    background-repeat:no-repeat;
+    background-color: #FBFAE8;
+    border-bottom:1px solid #dbdbdb;
+}
+#conteudo .orientacao A{color:#333}
+
+/* .erro: define as configurações das mensagem de erro*/
+.erro {
+    min-height:28px;
+    color:#B43419;
+    padding:0px 0px 0px 32px;
+    background-image:url(../img/m_erro.gif);
+    background-repeat:no-repeat;
+    background-color:#FDF5F3;
+    border-bottom:1px solid #F3B1A3
+}
+#conteudo .erro A{color:#B43419;}
+
+
+/* .sucesso: define as configurações das mensagem de sucesso*/
+.sucesso {
+    min-height:28px;
+    color:#294A72;
+    padding:0px 0px 0px 32px;
+    background-image:url(../img/m_sucesso.gif);
+    background-repeat:no-repeat;
+    background-color:#F5F9FC;
+    border-bottom:1px solid #B3C8E5
+}
+#conteudo .sucesso A{color:#294A72}
+
+
+/* .alerta: define as configurações das mensagem de alerta*/
+.alerta {
+    min-height:28px;
+    color:#000000;
+    padding:0px 0px 0px 32px;
+    background-image:url(../img/m_warnings.gif);
+    background-repeat:no-repeat;
+    background-color:#FAF9BC;
+    border-bottom:1px solid #DBC87B
+}
+#conteudo .alerta A{color:#000}
+
+
+/* Mensagens pop-up com fundo bloqueado */
+#popupBoxFundo{
+    background-color:#CCCCCC;
+    display:none;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+    height:100%;
+    left:0;
+    opacity:.20;
+    padding:0;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:250;}
+#popupBoxFundo iframe{display:none;}
+
+DIV#popupBox{
+    background-color: #B9B7B8;
+    display:none;
+    margin-left:-200px;
+    max-width:500px;
+    min-width:400px;
+    position:absolute;
+    top:45%;left:50%;
+    z-index:7000;}
+#popupBox DIV{
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    font-weight:bold;
+    left:-4px;
+    padding:5px;
+    position:relative;
+    top:-4px;}
+#popupBox .indicadorCarregando{margin-right:5px;}
+
+
+/* == Formulário - Elementos =========================================== */
+/* Conjunto de classes que define as configurações dos componentes da
+   Pagina Inicial												         */
+/* ===================================================================== */
+#pagInicial{
+    background-image:url("../img/bgPagInicial.jpg");
+    background-repeat:repeat-x;
+    margin:55px 20px auto 20px;
+    min-height:365px;
+    padding:20px;}
+
+#pagInicial UL{list-style:none;}
+#pagInicial UL UL{
+    border-top:2px solid #FFF;
+    margin:0;
+    padding-left:7px;}
+
+
+#pagInicial LI{
+    float:left;
+    font-size:1.1em;
+    font-weight:bold;
+    margin:10px 6px;
+    padding:6px;}
+#pagInicial LI LI{
+    float:none;
+    font-weight:normal;
+    margin:0;
+    padding:0;}
+
+#pagInicial H1{
+    font-weight:bold;
+    font-size:1.6em;
+    padding:0;
+    text-align:center;}
+
+#pagInicial A{color:#333;}
+
+
+
+/* == Formulário - Elementos =========================================== */
+/* Conjunto de classes que define as configurações dos componentes dos
+   formulários													         */
+/* ===================================================================== */
+
+.formulario, .listagem {
+    width: auto;
+    margin-top: 10px;
+    font-size: 11px;
+    padding: 0px 20px;
+    clear:both;
+}
+
+.formulario fieldset {
+    margin: 0px 0px 10px 0px;
+    border: none;
+}
+
+.formulario fieldset.visivel {
+    margin: 5px 0px;
+    border: 1px dashed #ccc;
+    padding: 5px 10px;
+}
+
+.formulario legend {
+    text-indent: 0px;
+    font-weight: bold;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.formulario fieldset.visivel legend{ /* .formulario legend.legendaDiscreta */
+    padding-left:10px;
+    margin-bottom: 0px;
+}
+
+div.formulario .row {
+    display: table-row;
+    margin: 5px 0px;
+    vertical-align:middle;
+}
+
+div.formulario .label{
+    float: left;
+    margin: 4px 10px 0px 0px;
+    text-align: left;
+    display:block;
+    height:20px;
+}
+
+div.formulario .field {
+    width: auto;
+    text-align: left;
+    display:block;
+    min-height:20px;
+}
+
+.botoesEsquerda {
+    text-align: left;
+    margin: 5px 0px 10px 0px;
+    height: 30px;
+}
+
+.botoesDireita {
+    text-align: right;
+    margin: 5px 0px 10px 0px;
+    height: 30px;
+}
+
+.botoesDireita a, .botoesEsquerda a {
+    display: inline;
+}
+
+/* Configurações do campos do formulário*/
+input, select, textarea{
+    font-family: "Trebuchet MS", Verdana, Arial, sans-serif, sans;
+    font-size: 11px;
+    border:1px solid #999999;
+    padding-left:3px;
+}
+
+select{text-transform:uppercase;}
+
+
+input.botao {
+    color: #666666;
+    padding: 0px 10px;
+    border-style: solid;
+    border-color: #999999;
+    border-width: 0px 1px 1px 0px;
+    margin-right: 2px;
+    background-image:url(../img/f_botao.gif);
+    background-repeat:repeat-x;
+    height: 20px;
+    font-weight:bold;
+    text-transform:none;
+}
+
+#conteudo div.formulario a.imitacaoBotao, #conteudo a.imitacaoBotao, #conteudo div.formulario button.imitacaoBotao {
+    color: #666666;
+    padding: 3px 10px 3px 10px;
+    border-style: solid;
+    border-color: #999999;
+    border-width: 0px 1px 1px 0px;
+    margin-right: 2px;
+    background-image:url(../img/f_botao.gif);
+    background-repeat:repeat-x;
+    height: 20px;
+    font-weight:bold;
+    cursor: default;
+}
+
+#conteudo div.formulario a.imitacaoBotao:hover, #conteudo a.imitacaoBotao:hover {
+    color: #666666;
+    text-decoration: none;
+    cursor: default;
+}
+
+a.bt{
+    color: #666666;
+    padding: 3px;
+    border-style: solid;
+    border-color: #999999;
+    border-width: 0px 1px 1px 0px;
+    margin-right: 2px;
+    background-image:url(../img/f_botao.gif);
+    background-repeat:repeat-x;
+    height: 20px;
+    font-weight:bold;
+    text-transform:none;
+}
+
+/* == Listagem - Elementos ============================================= */
+/* Conjunto de classes que define as configurações dos componentes das
+   listagens													         */
+/* ===================================================================== */
+.tabelaListagemItensWrapper {
+    background-color: #f4f4f4;
+    padding: 8px;
+}
+
+.infoFiltrosListagemItens {
+    float:left;
+    margin:5px 0px 2px 0px;
+}
+
+
+.paginacaoWrapper {margin:6px 0px 0px 0px;}
+.paginacaoListagemItens {text-align:right}
+
+
+.paginacaoListagemItens a{
+    margin:1px;
+    padding:1px 4px;
+    border-style: solid;
+    border-color: #999999;
+    border-width: 0px 1px 1px 0px;
+    color:#000000;
+    background-image:url(../img/f_botao.gif);
+}
+
+.paginacaoListagemItens a:hover{text-decoration:none;}
+
+.paginacaoListagemItens a.paginaAtual{
+    cursor:default;
+    font-weight:bold
+}
+
+
+.tabelaListagemItens table {
+    width: 100%;
+    font-size: 11px;
+    padding: 0px;
+    margin: 4px 0px 0px 0px;
+    border-collapse:collapse;
+    clear: both;
+}
+
+.tabelaListagemItens tr {
+    background-color: #ffffff;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+
+.tabelaListagemItens tr.zebra {
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+
+.tabelaListagemItens th {
+    padding: 2px 4px;
+    /*text-align: left;*/
+    background-color:#CCCCCC;
+    border: 1px solid #666666;
+}
+
+.tabelaListagemItens th a{
+    color:#333333;
+}
+
+.tabelaListagemItens td {
+    padding: 2px 4px;
+    /* text-align: left; */
+    border-right: 1px solid #CCCCCC;
+}
+
+.iconeAlterar {
+    width: 50px
+}
+
+.iconeExcluir {
+    width: 50px
+}
+
+.iconeAlterar a{
+    display: block;
+    height: 15px;
+    margin: 0px 15px;
+    background-image: url(../img/alterar.gif);
+    background-repeat: no-repeat;
+}
+
+.iconeExcluir a{
+    display: block;
+    height: 15px;
+    margin: 0px 15px;
+    background-image: url(../img/excluir.gif);
+    background-repeat: no-repeat;
+}
+
+.alignMoeda{
+    text-align: right;
+}
+
+table td{
+    font-size: 11px;
+}
+.tabelaListagemItens tr.fundo_alerta{
+    background-color: #CDAA7D;
+}

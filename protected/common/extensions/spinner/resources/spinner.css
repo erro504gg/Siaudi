@@ -1,0 +1,53 @@
+/* 
+    Document   : spinner
+    Created on : 30 Απρ 2009, 9:06:57 μμ
+    Author     : lordovol
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/* The spinner */
+div.spinner {
+  position: relative;
+}
+
+/* The text displayed next to the spinner */
+.spinner .text {
+  color: #cc0066;
+  vertical-align: text-bottom;
+}
+/* The up down buttons */
+.spinner .button_up, .spinner .button_down {
+  padding: 0px;
+  margin-left:3px;
+  border: solid 1px black;
+  cursor:pointer;
+  width: 13px;
+  height: 8px;
+}
+/* The button up background */
+.spinner .button_up {
+  background-image: url(up.png);
+  background-repeat: no-repeat;
+}
+
+.spinner .disabled {
+  background-image: none;
+  cursor: default;
+  background-color: #999999;
+}
+
+/* The button down background */
+.spinner .button_down {
+  background-image: url(down.png);
+  background-repeat: no-repeat;
+}
+/*The textfield default width*/
+.spinner .textField{
+  width:40px;
+}

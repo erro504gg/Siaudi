@@ -1,0 +1,275 @@
+/* == add Yii Framework============================================= */
+/*													         */
+/* ===================================================================== */
+
+.formulario fieldset.visivel .label {
+    width: 220px;
+}
+
+div.formulario .field {
+    display: inline;
+}
+
+/* .erro: define as configuracoes das mensagem de erro*/
+.erro {
+    min-height:28px;
+    color:#B43419;
+    padding:0px 0px 0px 32px;
+    background-image:url(img/m_erro.gif);
+    background-repeat:no-repeat;
+    background-color:#FDF5F3;
+    border-bottom:1px solid #F3B1A3
+}
+#conteudo .erro A{color:#B43419;}
+
+#conteudo .celula_destaque_vermelho a {
+    color: #C00;
+}
+
+#conteudo .celula_destaque_azul a {
+    color: #0000FF;
+}
+
+#conteudo .celula_destaque_verde a {
+    color: #0A0;
+}
+
+#conteudo .celula_destaque_laranja a {
+    color: #EA7500;
+}
+
+#conteudo .celula_destaque_bege a {
+    color: #eb8f00;
+}
+
+#conteudo .celula_destaque_magenta a {
+    color: #db4865;
+}
+
+#conteudo .celula_destaque_azul_bebe a {
+    color: #a6c9e2;
+}
+
+#conteudo .celula_destaque_preto a {
+    color: #000000;
+}
+
+.celula_vermelha {
+    color: #ff0000;
+    background-color: #FDF5F3;
+}
+
+.celula_preta {
+    color: #000000;    
+}
+
+/* .sucesso: define as configuracoes das mensagem de sucesso*/
+.sucesso {
+    min-height:28px;
+    color:#294A72;
+    padding:0px 0px 0px 32px;
+    background-image:url(img/m_sucesso.gif);
+    background-repeat:no-repeat;
+    background-color:#F5F9FC;
+    border-bottom:1px solid #B3C8E5
+}
+#conteudo .sucesso A{color:#294A72}
+
+
+/* .alerta: define as configuracoes das mensagem de alerta*/
+.alerta {
+    min-height:28px;
+    color:#000000;
+    padding:0px 0px 0px 32px;
+    background-image:url(img/m_warnings.gif);
+    background-repeat:no-repeat;
+    background-color:#FAF9BC;
+    border-bottom:1px solid #DBC87B
+}
+#conteudo .alerta A{color:#000}
+
+
+div.formulario span.required
+{
+    color: red;
+}
+
+div.formulario div.error label,
+div.formulario label.error,
+div.formulario span.error
+{
+    color: #C00;
+}
+
+div.formulario div.error input,
+div.formulario div.error textarea,
+div.formulario div.error select,
+div.formulario input.error,
+div.formulario textarea.error,
+div.formulario select.error
+{
+    background: #FEE;
+    border-color: #C00;
+}
+
+div.formulario div.success input,
+div.formulario div.success textarea,
+div.formulario div.success select,
+div.formulario input.success,
+div.formulario textarea.success,
+div.formulario select.success
+{
+    background: #E6EFC2;
+    border-color: #C6D880;
+}
+
+
+div.formulario .errorSummary
+{
+    min-height:28px;
+    color:#B43419;
+    padding:0px 0px 0px 32px;
+    background-image:url(img/m_erro.gif);
+    background-repeat:no-repeat;
+    background-color:#FDF5F3;
+    border-bottom:1px solid #F3B1A3
+}
+
+div.formulario .errorMessage
+{
+    color: red;
+    font-size: 0.9em;
+}
+
+div.formulario .errorSummary p
+{
+    margin: 0;
+    padding: 5px;
+}
+
+div.formulario .errorSummary ul
+{
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.sumario
+{
+    margin: 0 0 5px 0;
+    text-align: left;
+}
+
+div.formulario div.success input,
+div.formulario div.success textarea,
+div.formulario div.success select,
+div.formulario input.success,
+div.formulario textarea.success,
+div.formulario select.success
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #999999;
+}
+
+div.formulario .autocomplete {
+    background-color: #F9FCFF;
+    border: 1px solid #67A8E5;
+}
+
+.yiiPager .hidden, .yiiPager .first, .yiiPager .last {
+    display: none;
+}
+
+.grid-view .button-column {
+    border-right: 1px solid #000000;
+}
+
+.tabelaListagemItens tr td:last-child {
+    min-width: 100px;
+    max-width: 250px;
+}
+/* estilo da grid para o yii */
+.tabelaListagemItensYii{
+    width: 100%;
+    font-size: 11px;
+    padding: 0px;
+    margin: 4px 0px 0px 0px;
+    border-collapse:collapse;
+    clear: both;
+}
+
+.tabelaListagemItensYii tr.even {
+    background-color: #ffffff;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+
+.tabelaListagemItensYii tr.odd {
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.tabelaListagemItensYii th {
+    padding: 2px 4px;
+    /*text-align: left;*/
+    background-color:#CCCCCC;
+    border: 1px solid #666666;
+}
+
+.tabelaListagemItensYii th a{
+    color:#333333;
+}
+
+.tabelaListagemItensYii td {
+    padding: 2px 4px;
+    /*text-align: left;*/
+    border-right: 1px solid #CCCCCC;
+}
+
+.tabelaListagemItensYii .button-column {
+    text-align: center;
+    width: 60px;
+    border-right: 0px solid #CCCCCC;
+}
+
+
+.risco_irrelevante {
+    background-color: #86B686;
+    width:100px;
+    height:16px;    
+}
+
+.risco_baixo {
+    background-color: #B7D4B7;
+    width:100px;
+    height:16px;    
+}
+
+.risco_medio {
+    background-color: #FFEDA5;
+    width:100px;
+    height:16px;    
+}
+
+.risco_alto {
+    background-color: #FFD089;
+    width:100px;
+    height:16px;    
+}
+
+.risco_critico {
+    background-color: #CB7C7C;
+    width:100px;
+    height:16px;    
+}
+/* */
+
+
+
+div.formulario .field_palestrante {
+display: inline-table;
+padding: 4px 0;
+vertical-align: middle;
+min-height: 20px;
+text-align: left;
+width: auto;;
+}

@@ -1,0 +1,62 @@
+***************************************************************************
+framework atualizado para a versao 1.1.10 - 18-05-2012
+junio.santos
+correcao no arquivo abaixo para adicionar nao schema  somente quando for public
+
+/var/www/yii/framework/db/schema/pgsql/CPgsqlSchema.php
+
+ ---- linha 162
+ ---- antigo
+//if($schemaName===$this->schema){
+
+ ---- linha 163
+ ---- atualizacao
+ if($schemaName==='public'){
+
+--atualizacoes da versao abaixo continua
+
+
+
+
+
+***************************************************************************
+Alteracao no arquivo 
+/var/www/yii/framework/db/schema/pgsql/CPgsqlSchema.php
+
+---- linha 61
+criacao do schema dinamico de acordo com o param do main.php
+para gerar os relacionamentos no gii
+
+
+comentado
+--------------------------------------
+const DEFAULT_SCHEMA='public';
+-- alterado todas as suas referencias para $this->schema
+
+
+novo
+-----------------------------------------
+ public function __construct($conn) {
+            parent::__construct($conn);
+            
+            if(Yii::app()->params->schema){
+               $this->schema = Yii::app()->params->schema;
+            }
+        }
+
+
+	
+***************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+

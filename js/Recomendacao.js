@@ -1,0 +1,49 @@
+/********************************************************************************
+*  Copyright 2015 Conab - Companhia Nacional de Abastecimento                   *
+*                                                                               *
+*  Este arquivo é parte do Sistema SIAUDI.                                      *
+*                                                                               *
+*  SIAUDI  é um software livre; você pode redistribui-lo e/ou                   *
+*  modificá-lo sob os termos da Licença Pública Geral GNU conforme              *
+*  publicada pela Free Software Foundation; tanto a versão 2 da                 *
+*  Licença, como (a seu critério) qualquer versão posterior.                    *
+*                                                                               *
+*  SIAUDI é distribuído na expectativa de que seja útil,                        *
+*  porém, SEM NENHUMA GARANTIA; nem mesmo a garantia implícita                  *
+*  de COMERCIABILIDADE OU ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.                *
+*  Consulte a Licença Pública Geral do GNU para mais detalhes em português:     *
+*  http://creativecommons.org/licenses/GPL/2.0/legalcode.pt                     *
+*                                                                               *
+*  Você deve ter recebido uma cópia da Licença Pública Geral do GNU             *
+*  junto com este programa; se não, escreva para a Free Software                *
+*  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA    *
+*                                                                               *
+*  Sistema   : SIAUDI - Sistema de Auditoria Interna                            *
+*  Data      : 05/2015                                                          *
+*                                                                               *
+********************************************************************************/
+    function envia_recomendacao() {
+    $('#inserir_recomendacao').val("1");
+    $('#recomendacao-form').submit();
+}
+
+function importacao(url) {
+    window.open(url, '_blank', 'width=700,height=500,scrollbars=yes,resizable=yes,location=no,toolbar=no,status=no');
+}
+
+
+$(function() {
+    $("#Recomendacao_numero_capitulo").keypress(verificaNumeroRomano);
+});        
+
+
+$(window).load(function(){
+$('#recomendacao-form').change(function() {
+    valor_rec  = $('#Recomendacao_recomendacao_tipo_fk option:selected' ).text();
+    if (valor_rec=="Recomendação") {
+        $('#detalhamento_recomendacao').show();
+    } else {
+        $('#detalhamento_recomendacao').hide();
+    }
+});    
+});

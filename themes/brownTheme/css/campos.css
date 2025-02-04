@@ -1,0 +1,83 @@
+.labelCampo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #3B3B3B;
+}
+
+.labelCampo2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #3B3B3B;
+}
+
+.mouse_mao{
+  cursor:pointer;
+  cursor:hand;
+}
+
+.btnmenuContexto{
+	display:inline;
+	padding:0px 5px;
+	border:2px solid #dbdbdb;
+	margin:0px 2px 0px 0px;
+	background:#dbdbdb;
+}
+
+.linkSublinhado{
+	cursor:pointer;
+	cursor:hand;
+	text-decoration: underline; 
+	color:#3B3B3B;
+}
+
+.labelRelatorio{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;	
+}
+
+.labelRelatorio2{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.labelRecomendacao{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.labelSugestao{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.tabelaAcesso tr.zebra {
+	background-color: #f4f4f4;
+//	border-bottom: 1px solid #CCCCCC;
+}
+
+
+.tabelaAcesso th {
+//	padding: 2px 4px;
+//	text-align: left;
+//	background-color:#CCCCCC;
+//	border-bottom:1px solid #666666;
+}
+
+.tabelaAcesso td {
+//	padding: 2px 4px;
+//	text-align: left;
+}
+
+.tabelaAcesso tr:hover {background-color: #F1E7D8;}//#E7D6BE;}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////

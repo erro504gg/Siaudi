@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Controller is the customized base controller class.
+ * All controller classes for this application should extend from this base class.
+ */
+class Controller extends CController {
+
+    /**
+     * @var string the default layout for the controller view. Defaults to '//layouts/column1',
+     * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
+     */
+    public $layout = '//layouts/coluna1';
+    public $titulo = 'Inicio';
+    public $subtitulo = '';
+    public $path_theme;
+    public $sistemas;
+
+    /**
+     * 
+     */
+    public function init() {
+        parent::init();
+        $this->path_theme = Yii::app()->request->baseUrl . '/themes/' . Yii::app()->params['tema'];
+    }
+
+
+}

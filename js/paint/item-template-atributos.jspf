@@ -1,0 +1,125 @@
+/********************************************************************************
+*  Copyright 2015 Conab - Companhia Nacional de Abastecimento                   *
+*                                                                               *
+*  Este arquivo é parte do Sistema SIAUDI.                                      *
+*                                                                               *
+*  SIAUDI  é um software livre; você pode redistribui-lo e/ou                   *
+*  modificá-lo sob os termos da Licença Pública Geral GNU conforme              *
+*  publicada pela Free Software Foundation; tanto a versão 2 da                 *
+*  Licença, como (a seu critério) qualquer versão posterior.                    *
+*                                                                               *
+*  SIAUDI é distribuído na expectativa de que seja útil,                        *
+*  porém, SEM NENHUMA GARANTIA; nem mesmo a garantia implícita                  *
+*  de COMERCIABILIDADE OU ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.                *
+*  Consulte a Licença Pública Geral do GNU para mais detalhes em português:     *
+*  http://creativecommons.org/licenses/GPL/2.0/legalcode.pt                     *
+*                                                                               *
+*  Você deve ter recebido uma cópia da Licença Pública Geral do GNU             *
+*  junto com este programa; se não, escreva para a Free Software                *
+*  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA    *
+*                                                                               *
+*  Sistema   : SIAUDI - Sistema de Auditoria Interna                            *
+*  Data      : 05/2015                                                          *
+*                                                                               *
+********************************************************************************/
+
+    <div id="winAtributos" class="easyui-window" title="Atributos do PAINT" style="width:700px;height:300px;" closed="true" minimizable="false" maximizable="false" modal="false" resizable="false">  
+
+	<div id="divAtributos" class="row" style="display:none;">
+	
+		<div class="tabelaListagemItens">
+		
+			<table name="${form.atributos}" id="row" requestURIcontext="false" requestURI="${pageContext.request.requestURI}" pagesize="0" >
+                            <tr>
+					
+					<td style="width: 1%">
+						<a href="javascript:void(0);" onclick="addParametroAtCursor(document.getElementById('atributoNome3').value)" styleClass="buttonLink">
+						<img src="<? echo $baseUrl;?>/images/adicionar.gif" style="display:inline;border:0;" title="Adicionar Atributo" />
+						</a>
+					</td>
+					
+			
+					<td class="sigla" style="width: 25%" /> 
+                                        <input type="hidden" value="Acoes_Direcionadas" id="atributoNome3" /> Acoes Direcionadas
+                                         </td>
+									
+					<td class="sigla" /> Adiciona todas as tabelas de Ações Direcionadas ao PAINT</td>
+				
+                           </tr>
+                            <tr>
+					
+					<td style="width: 1%">
+						<a href="javascript:void(0);" onclick="addParametroAtCursor(document.getElementById('atributoNome1').value)" styleClass="buttonLink">
+						<img src="<? echo $baseUrl;?>/images/adicionar.gif" style="display:inline;border:0;" title="Adicionar Atributo" />
+						</a>
+					</td>
+					
+			
+					<td class="sigla" style="width: 25%" /> 
+                                        <input type="hidden" value="Tabela_de_Homens_Hora" id="atributoNome1" /> Tabela de Homens / Hora
+                                         </td>
+									
+					<td class="sigla" /> Adiciona a Tabela de Homens / Hora ao PAINT</td>
+				
+                           </tr>
+                            <tr>
+					
+					<td style="width: 1%">
+						<a href="javascript:void(0);" onclick="addParametroAtCursor(document.getElementById('atributoNome5').value)" styleClass="buttonLink">
+						<img src="<? echo $baseUrl;?>/images/adicionar.gif" style="display:inline;border:0;" title="Adicionar Atributo" />
+						</a>
+					</td>
+					
+			
+					<td class="sigla" style="width: 25%" /> 
+                                        <input type="hidden" value="Tabela_de_Risco" id="atributoNome5" /> Tabela de Risco
+                                         </td>
+									
+					<td class="sigla" /> Adiciona a Tabela de Risco ao PAINT</td>
+				
+                           </tr>
+                            <tr>		
+					<td style="width: 1%">
+						<a href="javascript:void(0);" onclick="addParametroAtCursor(document.getElementById('atributoNome2').value)" styleClass="buttonLink">
+						<img src="<? echo $baseUrl;?>/images/adicionar.gif" style="display:inline;border:0;" title="Adicionar Atributo" />
+						</a>
+					</td>
+					
+			
+					<td class="sigla" style="width: 25%" /> 
+                                        <input type="hidden" value="Tabela_de_SubRisco" id="atributoNome2" /> Tabelas de SubRisco
+                                         </td>
+									
+					<td class="sigla" /> Adiciona todas as Tabelas de Sub Risco ao PAINT</td>
+                           </tr>
+                            <tr>
+					<td style="width: 1%">
+						<a href="javascript:void(0);" onclick="addParametroAtCursor(document.getElementById('atributoNome6').value)" styleClass="buttonLink">
+						<img src="<? echo $baseUrl;?>/images/adicionar.gif" style="display:inline;border:0;" title="Adicionar Atributo" />
+						</a>
+					</td>
+			
+					<td class="sigla" style="width: 25%" /> 
+                                        <input type="hidden" value="Inserir_pagina_retrato" id="atributoNome6" /> Inserir página Retrato
+                                         </td>
+									
+					<td class="sigla" /> Insere uma página no formato Retrato (vertical)</td>
+                           </tr>
+                            <tr>
+					<td style="width: 1%">
+						<a href="javascript:void(0);" onclick="addParametroAtCursor(document.getElementById('atributoNome7').value)" styleClass="buttonLink">
+						<img src="<? echo $baseUrl;?>/images/adicionar.gif" style="display:inline;border:0;" title="Adicionar Atributo" />
+						</a>
+					</td>
+					
+			
+					<td class="sigla" style="width: 25%" /> 
+                                        <input type="hidden" value="Inserir_pagina_paisagem" id="atributoNome7" /> Inserir página Paisagem
+                                         </td>
+									
+					<td class="sigla" /> Insere uma página no formato Paisagem (horizontal)</td>
+                           </tr>
+		    </table>			
+		</div>
+	</div>
+</div>

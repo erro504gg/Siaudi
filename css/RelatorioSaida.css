@@ -1,0 +1,100 @@
+/********************************************************************************
+*  Copyright 2015 Conab - Companhia Nacional de Abastecimento                   *
+*                                                                               *
+*  Este arquivo é parte do Sistema SIAUDI.                                      *
+*                                                                               *
+*  SIAUDI  é um software livre; você pode redistribui-lo e/ou                   *
+*  modificá-lo sob os termos da Licença Pública Geral GNU conforme              *
+*  publicada pela Free Software Foundation; tanto a versão 2 da                 *
+*  Licença, como (a seu critério) qualquer versão posterior.                    *
+*                                                                               *
+*  SIAUDI é distribuído na expectativa de que seja útil,                        *
+*  porém, SEM NENHUMA GARANTIA; nem mesmo a garantia implícita                  *
+*  de COMERCIABILIDADE OU ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.                *
+*  Consulte a Licença Pública Geral do GNU para mais detalhes em português:     *
+*  http://creativecommons.org/licenses/GPL/2.0/legalcode.pt                     *
+*                                                                               *
+*  Você deve ter recebido uma cópia da Licença Pública Geral do GNU             *
+*  junto com este programa; se não, escreva para a Free Software                *
+*  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA    *
+*                                                                               *
+*  Sistema   : SIAUDI - Sistema de Auditoria Interna                            *
+*  Data      : 05/2015                                                          *
+*                                                                               *
+********************************************************************************/
+
+.labelCampo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #3B3B3B;
+}
+
+.labelCampo2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #3B3B3B;
+}
+
+.mouse_mao{
+  cursor:pointer;
+  cursor:hand;
+}
+
+.btnmenuContexto{
+	display:inline;
+	padding:0px 5px;
+	border:2px solid #dbdbdb;
+	margin:0px 2px 0px 0px;
+	background:#dbdbdb;
+}
+
+.linkSublinhado{
+	cursor:pointer;
+	cursor:hand;
+	text-decoration: underline; 
+	color:#3B3B3B;
+}
+
+.labelRelatorio{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;	
+}
+
+.labelRelatorio2{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.labelRecomendacao{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.labelSugestao{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+
+.tabelaAcesso tr.zebra {
+	background-color: #f4f4f4;
+//	border-bottom: 1px solid #CCCCCC;
+}
+
+
+.tabelaAcesso th {
+//	padding: 2px 4px;
+//	text-align: left;
+//	background-color:#CCCCCC;
+//	border-bottom:1px solid #666666;
+}
+
+.tabelaAcesso td {
+//	padding: 2px 4px;
+//	text-align: left;
+}
+
+.tabelaAcesso tr:hover {background-color: #F1E7D8;}
