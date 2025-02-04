@@ -1,192 +1,131 @@
-# INSTALAÇÃO SIAUDI
+**Bem-vindo ao Siaudi-Sistema-de-Auditoria!**
 
-### Instalação do Ubuntu
+Foi desenvolvido pela https://softwarepublico.gov.br/social/siaudi/ apenas fiz uma alterações para rodar nas aplicações de hoje em dia, pois a última data de atualização deles foi em 2016.
 
-Instale o UBUNTU (versão homologada 14.04.2 LTS) e atualize-o.
+Instalação do Ubuntu
+Instale o Ubuntu (recomenda-se a versão 22.04 LTS ou superior). Atualize o sistema rodando o comando:
 
-### Configuração do Ambiente
+sudo apt update && sudo apt upgrade -y
+Configuração do Ambiente
+**1. Instalação do Apache no Ubuntu**
+Para instalar o Apache, execute:
 
-##### 1. Instalação do Apache no Ubuntu
+```sudo apt instalar apache2 -y```
 
-```sh
-  $ sudo apt-get install apache2
-```
+**2. Ativação do Módulo rewrite do Apache**
+Ative o módulo necessário para URLs amigáveis com o comando:
 
-##### 2. Ativação do Módulo a2enmod
+```sudo a2enmod```
 
-```sh
-  $ sudo a2enmod rewrite
-```
+**3. Configuração do arquivo apache2.conf**
+Edite o arquivo de configuração do Apache:
 
-##### 3. Configuração do arquivo apache2.conf
+```sudo nano /etc/apache2/apache2.conf```
+*Encontre a linha 
+AllowOverride None
 
-Edite o arquivo:
+*Mude para 
+AllowOverride All
 
-```sh
-  $ sudo gedit /etc/apache2/apache2.conf
-```
+**4. Configuração do diretório padrão de carga do Apache**
+Edite o arquivo de configuração do site padrão:
 
-Procure pelas linhas com AllowOverride None e troque por AllowOverride All.
+```sudo nano /etc/apache2/sites-available/000-default.conf```
 
-##### 4. Configuração do diretório default de carga do APACHE
+Altere a linha: DocumentRoot /var/www/html
+Para: DocumentRoot /var/www/
+**5. Instalação do PHP e Pacotes Necessários**
+Instale o PHP 8.1 (ou versão mais recente):
 
-Edite o arquivo:
+```sudo apt install php libapache2-mod-php php-pgsql php-gd php-mbstring php-curl php-xml php-zip php-cli -y```
+**6. Configuração do PHP**
+Edite o arquivo php.ini para ajustes de desempenho:
 
-```sh
-  $ sudo gedit /etc/apache2/sites-available/000-default.conf
-```
+```sudo nano /etc/php/8.1/apache2/php.ini```
 
-Procure pela linha com DocumentRoot /var/www/html  e troque por DocumentRoot /var/www/
+Substitua ou adicione as seguintes linhas:
 
-##### 5. Instalação do PHP5 e pacotes auxiliares 
+session.auto_start = 1
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE
+memory_limit = 1024M
+post_max_size = 128M
+display_errors = On
+short_open_tag = On
 
-Rode o comando:
+**7. Reiniciar o Apache**
+Após as mudanças, reinicie o Apache para aplicar as configurações:
 
-```sh
-  $ sudo apt-get install php5 php5-dev php5-cli php5-gd php5-ldap php5-mcrypt php5-memcache php5-pgsql php-pear
-```
+```sudo systemctl restart apache2```
 
-##### 6. Configuração do PHP
+**Instalação do Banco de Dados**
 
-Edite o arquivo:
+**1. Instalação do PostgreSQL e PGAdmin**
+Instale o PostgreSQL e o PGAdmin:
 
-```sh
-  $ sudo gedit /etc/php5/apache2/php.ini
-```
+```sudo apt install postgresql postgresql-contrib -y```
+```sudo apt install pgadmin4 -y```
 
-Procure pelas linhas abaixo e substitua pelos valores apresentados:
+**2. Instalação do Projeto SIAUDI**
+Copie o arquivo siaudi2 para o diretório /var/www:
 
-```apacheconf
-  session.auto_start = 1
-  error_reporting = E_ALL & ~E_DEPRECATED  & ~E_STRICT & ~E_NOTICE
-  memory_limit = 1024M
-  post_max_size = 128M
-  display_errors = On
-  short_open_tag = On
-```
+```sudo cp siaudi2 /var/www/```
+```sudo chown -R www-data:www-data /var/www/siaudi2```
+```sudo chmod -R 755 /var/www/siaudi2```
 
-##### 7. Recarga do Servidor APACHE:
+3. Criação da Base de Dados
+Altere a localidade do sistema:
 
-Rode o comando:
+```sudo nano /etc/profile```
 
-```sh
-  $ sudo /etc/init.d/apache2 restart
-```
+Adicione a linha:
+export LANG=pt_BR.UTF-8
 
-### Instalação do Banco de Dados
+Em seguida, execute:
+```sudo locale-gen pt_BR.UTF-8```
+```source /etc/profile```
+```sudo systemctl restart postgresql```
 
-##### 1. Instalação do PostgreSQL e PGAdmin
+**Crie a base de dados usando o comando:**
 
-```sh
-  $ sudo apt-get install postgresql
-  $ sudo apt-get install pgadmin3
-```
+```sudo -u postgres psql -f /var/www/siaudi2/script_Bd/siaudispb.sql```
 
-##### 2. Instalação do Projeto SIAUDI no Ubuntu
+**Configuração e Acesso ao SIAUDI**
 
-Copie o arquivo "siaudi2.zip" para o diretório "/var/www"
+**1. Configuração da Conexão com o Banco de Dados**
+Edite o arquivo de configuração do SIAUDI:
 
-```sh
-  $ sudo unzip /var/www/siaudi2.zip -d /var/www
-  $ cd /var/www/siaudi2
-```
+```sudo nano /var/www/siaudi2/protected/config/main.php```
+Atualize a configuração de conexão com o banco:
 
-Certifique-se de que as pastas assets e protected/runtime podem ser escritas pelo servidor web. Escolha um dos comandos abaixo:
-
-```sh
-  $ sudo chmod 777 assets & chmod 777 protected/runtime
-  $ sudo chown www-data:www-data assets & chown www-data:www-data protected/runtime
-```
-
-PS.: o arquivo siaudi2.zip não é mais necessário e pode ser apagado
-
-##### 3. Criação da Base de Dados
-
-Edite o arquivo:
-
-```sh
-  $ sudo gedit /etc/profile
-```
-
-Adicione no início do arquivo a linha:
-
-```sh
-  export LANG=pt_BR.iso88591
-```
-
-```sh
-  $ sudo locale-gen pt_BR
-  $ source /etc/profile
-  $ sudo /etc/init.d/postgresql restart
-  $ sudo -u postgres psql -f /var/www/siaudi2/script_Bd/siaudispb.sql -o /tmp/resultado.txt
-```
-
-### Configuração e Acesso ao SIAUDI
-
-##### 1. Configuração da conexão com o BD 
-
-Edite o arquivo:
-
-```sh
-  $ sudo gedit /var/www/siaudi2/protected/config/main.php
-```
-
-Na linha 144 altere a string de conexão de acordo com o endereço do servidor de banco de dados (por padrão já está configurado para acesso via localhost):
-
-```php
 'db' => array(
     'class' => 'application.components.MyDbConnection',
     'connectionString' => 'pgsql:host=localhost;port=5432;dbname=bd_siaudi',
-    'emulatePrepare' => false,
     'username' => 'usrsiaudi',
     'password' => '!@#-usr-siaudi',
-    'charset' => 'latin1',
-    'tablePrefix' => 'tb_',
-    'enableProfiling' => YII_DEBUG,
-    'enableParamLogging' => YII_DEBUG,   
+    'charset' => 'UTF-8',
 ),
-```
 
-Certifique-se de que a porta de conexão com o banco na configuração acima seja a porta pela qual o banco escuta conexões.
+**2. Verificação da Porta do PostgreSQL**
+Para verificar a porta do PostgreSQL, execute:
+```sudo nano /etc/postgresql/12/main/postgresql.conf```
 
-O PostgreSQL geralmente tenta ser instalado na porta 5432 por padrão. Caso ele a encontre ocupada, utilizará a próxima porta que não estiver ocupada (5433, ou 5434 e assim por diante).
+Procure por port e verifique se é a 5432.
+Caso contrário, atualize o arquivo de configuração do SIAUDI conforme necessário.
 
-Para checar qual porta ele está utilizando, execute o comando abaixo:
+**3. Configuração do Sistema no SIAUDI**
+Edite novamente o arquivo main.php e adicione os e-mails de auditoria:
 
-```sh
-  $ sudo gedit /etc/postgresql/9.3/main/postgresql.conf
-```
-
-Procure por “port”
-
-##### 2. Configuração do sistema
-
-Edite o arquivo:
-
-```sh
-  $ sudo gedit /var/www/siaudi2/protected/config/main.php
-```
-
-Popule o campo 'emailGrupoAuditoria' da variável 'params' da linha 240 do arquivo usando um array PHP com os e-mails da auditoria que deverão receber todas as mensagens gerenciais do sistema (ex.: manifestações de auditados).
-
-```php
-'params' => array(
-    // this is used in contact page
-    'adminEmail' => 'email.de.contato@dominio.com.br',
-    'emailGrupoAuditoria' => array(
-        'email_interessado_um@dominio.gov.br',
-        'email_interessado_dois@dominio.gov.br',
-    ),
-    //'dominioEmail' => '@dominio.com.br',
-    'id_aplicacao' => 'SIAUDI2',
-    … (outras definições omitidas pela legibilidade)
+'emailGrupoAuditoria' => array(
+    'email1@dominio.com',
+    'email2@dominio.com',
 ),
-```
 
-##### 3. Acesso ao sistema
+**4. Acesso ao Sistema**
+Acesse o sistema via navegador:
 
-Rode o browser no endereço: "http://localhost/siaudi2"
+```http://localhost/siaudi2```
+
+Credenciais de acesso:
 
 Usuário: siaudi.gerente
-
 Senha: 123456
