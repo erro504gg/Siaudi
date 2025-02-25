@@ -3,10 +3,12 @@
 Foi desenvolvido pela https://softwarepublico.gov.br/social/siaudi/ apenas fiz uma alterações para rodar nas aplicações de hoje em dia, pois a última data de atualização deles foi em 2016.
 
 Instalação do Ubuntu
-Instale o Ubuntu (recomenda-se a versão 22.04 LTS ou superior). Atualize o sistema rodando o comando:
+Instale o Ubuntu (recomenda-se a versão 22.04 LTS, foi a que eu usei). Atualize o sistema rodando o comando:
 
 sudo apt update && sudo apt upgrade -y
+
 Configuração do Ambiente
+
 **1. Instalação do Apache no Ubuntu**
 Para instalar o Apache, execute:
 
