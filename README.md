@@ -34,6 +34,7 @@ Ative o módulo necessário para URLs amigáveis com o comando:
 Edite o arquivo de configuração do Apache:
 
 ```sudo nano /etc/apache2/apache2.conf```
+
 *Encontre a linha 
 AllowOverride None
 
