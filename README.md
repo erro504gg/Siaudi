@@ -50,7 +50,7 @@ Altere a linha: DocumentRoot /var/www/html
 Para: DocumentRoot /var/www/
 
 **5. Instalação do PHP e Pacotes Necessários**
-Instale o PHP 8.1 (ou versão mais recente):
+Instale o PHP 8.1 (useiessa versão):
 
 ```sudo apt install php libapache2-mod-php php-pgsql php-gd php-mbstring php-curl php-xml php-zip php-cli -y```
 
