@@ -1,7 +1,18 @@
-**Bem-vindo ao Siaudi-Sistema-de-Auditoria!**
+**BEM-VINDO AO SISTEMA DE AUDITORIA - SIAUDI**
+_____________________________________________________________________
+Inicialmente, foi desenvolvido pela https://softwarepublico.gov.br/social/siaudi/ , fiz umas alterações para rodar nas aplicações dos dias atuais, pois a última data de atualização foi em 2016.
 
-Foi desenvolvido pela https://softwarepublico.gov.br/social/siaudi/ apenas fiz uma alterações para rodar nas aplicações de hoje em dia, pois a última data de atualização deles foi em 2016.
 
+_____________________________________________________________________
+Estou ultilizando:
+
+Apache2
+
+php 8.1
+
+Ubunto 22.04
+
+_____________________________________________________________________
 Instalação do Ubuntu
 Instale o Ubuntu (recomenda-se a versão 22.04 LTS, foi a que eu usei). Atualize o sistema rodando o comando:
 
@@ -76,7 +87,8 @@ Copie o arquivo siaudi2 para o diretório /var/www:
 ```sudo chown -R www-data:www-data /var/www/siaudi2```
 ```sudo chmod -R 755 /var/www/siaudi2```
 
-**10. Criação da Base de Dados**
+_____________________________________________________________________
+**Criação da Base de Dados**
 Altere a localidade do sistema:
 
 ```sudo nano /etc/profile```
@@ -93,7 +105,7 @@ Em seguida, execute:
 
 ```sudo -u postgres psql -f /var/www/siaudi2/script_Bd/siaudispb.sql```
 
-
+_____________________________________________________________________
 
 **Configuração e Acesso ao SIAUDI**
 
@@ -134,4 +146,5 @@ Acesse o sistema via navegador:
 Credenciais de acesso:
 
 Usuário: siaudi.gerente
+
 Senha: 123456
