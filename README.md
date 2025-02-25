@@ -36,10 +36,12 @@ Edite o arquivo de configuração do site padrão:
 
 Altere a linha: DocumentRoot /var/www/html
 Para: DocumentRoot /var/www/
+
 **5. Instalação do PHP e Pacotes Necessários**
 Instale o PHP 8.1 (ou versão mais recente):
 
 ```sudo apt install php libapache2-mod-php php-pgsql php-gd php-mbstring php-curl php-xml php-zip php-cli -y```
+
 **6. Configuração do PHP**
 Edite o arquivo php.ini para ajustes de desempenho:
 
@@ -61,20 +63,20 @@ Após as mudanças, reinicie o Apache para aplicar as configurações:
 
 **Instalação do Banco de Dados**
 
-**1. Instalação do PostgreSQL e PGAdmin**
+**8. Instalação do PostgreSQL e PGAdmin**
 Instale o PostgreSQL e o PGAdmin:
 
 ```sudo apt install postgresql postgresql-contrib -y```
 ```sudo apt install pgadmin4 -y```
 
-**2. Instalação do Projeto SIAUDI**
+**9. Instalação do Projeto SIAUDI**
 Copie o arquivo siaudi2 para o diretório /var/www:
 
 ```sudo cp siaudi2 /var/www/```
 ```sudo chown -R www-data:www-data /var/www/siaudi2```
 ```sudo chmod -R 755 /var/www/siaudi2```
 
-3. Criação da Base de Dados
+**10. Criação da Base de Dados**
 Altere a localidade do sistema:
 
 ```sudo nano /etc/profile```
@@ -90,6 +92,8 @@ Em seguida, execute:
 **Crie a base de dados usando o comando:**
 
 ```sudo -u postgres psql -f /var/www/siaudi2/script_Bd/siaudispb.sql```
+
+
 
 **Configuração e Acesso ao SIAUDI**
 
